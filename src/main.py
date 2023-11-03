@@ -1,13 +1,6 @@
-# main.py
-from flask import Flask, request, jsonify
-from src.routes import routes
+# File: src/main.py
 
-app = Flask(__name__)
-app.register_blueprint(routes)
+from src.routes.routes import app
 
-@app.route('/')
-def home():
-    return "Autogen Assisted Reflection API is up and running!"
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
